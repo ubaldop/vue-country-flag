@@ -22,4 +22,4 @@ In order to ease integration task, please squash your commits in a single one pr
 
 ## License
 
-All code in this repository is under the [MIT License v3.0](http://www.gnu.org/licenses/agpl.html)
+All code in this repository is under the [MIT License](https://opensource.org/licenses/MIT)
