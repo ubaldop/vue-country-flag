@@ -2,7 +2,7 @@
 
 <p align="center">
   <h4>Vue.js v2.x compatible <img src="https://img.shields.io/badge/vue%202.x-compatible-green.svg" alt="Vue.js 2 compatible"></h4>
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.0.0-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.0.1-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
 
