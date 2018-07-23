@@ -1,5 +1,5 @@
 <template>
-    <span :class="[flagIconClass, flagIconCountry, flagMargin]" :style="flagStyle"></span>
+    <span :class="flagIconClass" :style="flagStyle"></span>
 </template>
 
 <script>
@@ -24,7 +24,10 @@ export default {
   },
   computed: {
     flagIconClass () {
-      return "flag"
+      return {
+        [`flag ${this.flagIconCountry}`]: true,
+        [this.flagMargin]: true
+      }
     },
     flagIconCountry () {
       return `flag-${this.country.toLowerCase()}`
