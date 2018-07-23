@@ -142,7 +142,7 @@ They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_316
 * European Union (eu)
 * Falkland Islands (Malvinas) (fk)
 * Faroe Islands (fo)
-* Fiji
+* Fiji (fj)
 * Finland (fi)
 * France (fr)
 * French Polynesia (pf)
@@ -264,7 +264,7 @@ They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_316
 * Sierra Leone (sl)
 * Singapore (sg)
 * Slovakia (sk)
-* Slovenia (yes)
+* Slovenia (si)
 * Solomon Islands (sb)
 * Somalia (so)
 * South Africa (za)
