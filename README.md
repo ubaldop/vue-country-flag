@@ -271,7 +271,7 @@ They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_316
 * South Georgia and the South Sandwich Islands (gs)
 * South Korea (kr)
 * South Sudan (ss)
-* Spain (en)
+* Spain (es)
 * Sri Lanka (lk)
 * Sudan (sd)
 * Suriname (sr)
