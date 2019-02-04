@@ -1,18 +1,15 @@
 {
   "name": "vue-country-flag",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Simple Vue component for displaying of country flags",
   "main": "CountryFlag.vue",
-  
   "scripts": {
     "test": "jest"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/P3trur0/vue-country-flag.git"
   },
-  
   "keywords": [
     "vue",
     "vuejs",
@@ -22,14 +19,12 @@
     "icon",
     "component"
   ],
-
   "author": "P3trur0",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/P3trur0/vue-country-flag/issues"
   },
   "homepage": "https://github.com/P3trur0/vue-country-flag/",
-
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^6.26.3",
