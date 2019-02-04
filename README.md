@@ -6,7 +6,7 @@ _Country flags as a Vue Component_
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/vue%202.x-compatible-green.svg" alt="Vue.js 2 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.0.5-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.1.0-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
 
@@ -51,18 +51,18 @@ Then, after the proper mounting, in your template you can call it like this:
     <country-flag country='it' size='big'/>
     <country-flag country='hr' size='normal'/>
     <country-flag country='fr' size='small'/>
-    <country-flag country='ru'/>
+    <country-flag country='rus'/>
 ```
 
 ### API
 
-Mandatory properties
+**Mandatory properties**
 
 | Property | Description | Type | Value
 |:--|:--|:--|:--|
 | country | **ISO 3166-1** identifier of the country | `String` | one of the values defined [here](#available-flags) |
 
-Optional properties
+**Optional properties**
 
 | Property | Description | Type | Value
 |:--|:--|:--|:--|
@@ -73,247 +73,249 @@ by default, the flag is displayed at *normal* size.
 
 ## Available Flags
 
-Here follows the list of the currently available flags.
-They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard.
+Here follows the list of the available flags. They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) standard.  
+This component currently support both **alpha-2** and **alpha-3** alternatives of the standard.  
 
-* Afghanistan (af)
-* Aland Islands (ax)
-* Albania (al)
-* Algeria (dz)
-* American Samoa (as)
-* Andorra (ad)
-* Angola (ao)
-* Anguilla (ai)
-* Antigua and Barbuda (ag)
-* Argentina (ar)
-* Armenia (am)
-* Aruba (aw)
-* Australia (au)
-* Austria (at)
-* Azerbaijan (az)
-* Bahamas (bs)
-* Bahrain (bh)
-* Bangladesh (bd)
-* Barbados (bb)
-* Belarus (by)
-* Belgium (be)
-* Belize (bz)
-* Benin (bj)
-* Bermuda (bm)
-* Bhutan (bt)
-* Bolivia (bo)
-* Bosnia and Herzegovina (ba)
-* Botswana (bw)
-* Brazil (br)
-* British Virgin Islands (vg)
-* Brunei (bn)
-* Bulgaria (bg)
-* Burkina Faso (bf)
-* Burma (mm)
-* Burundi (bi)
-* Cambodia (kh)
-* Cameroon (cm)
-* Canada (ca)
-* Canary Islands (ic)
-* Cape Verde (cv)
-* Cayman Islands (ky)
-* Central African Republic (cf)
-* Chad (td)
-* Chile (cl)
-* China (cn)
-* Colombia (co)
-* Comoros (km)
-* Cook Islands (ck)
-* Costa Rica (cr)
-* Croatia (hr)
-* Cuba (cu)
-* Curacao (cw)
-* Cyprus (cy)
-* Czech Republic (cz)
-* Democratic Republic of the Congo (cd)
-* Denmark (dk)
-* Djibouti (dj)
-* Dominica (dm)
-* Dominican Republic (do)
-* East Timor (tl)
-* Ecuador (ec)
-* Egypt (eg)
-* El Salvador (sv)
-* Equatorial Guinea (gq)
-* Eritrea (er)
-* Estonia (ee)
-* Ethiopia (et)
-* European Union (eu)
-* Falkland Islands (Malvinas) (fk)
-* Faroe Islands (fo)
-* Fiji (fj)
-* Finland (fi)
-* France (fr)
-* French Polynesia (pf)
-* French Southern Territories (tf)
-* Gabon (ga)
-* Gambia (gm)
-* Georgia (ge)
-* Germany (de)
-* Ghana (gh)
-* Gibraltar (gi)
-* Granada (gd)
-* Greece (gr)
-* Greenland (gl)
-* Guam (gu)
-* Guatemala (gt)
-* Guernsey (gg)
-* Guinea (gn)
-* Guinea-Bissau (gw)
-* Guyana (gy)
-* Haiti (ht)
-* Honduras (hn)
-* Hong Kong (hk)
-* Hungary (hu)
-* Iceland (is)
-* India (in)
-* Indonesia (id)
-* Iran (ir)
-* Iraq (iq)
-* Ireland (ie)
-* Isle of Man (im)
-* Israel (il)
-* Italy (it)
-* Ivory Coast (ci)
-* Jamaica (jm)
-* Japan (jp)
-* Jersey (je)
-* Jordan (jo)
-* Kazakhstan (kz)
-* Kenya (ke)
-* Kiribati (ki)
-* Kuwait (kw)
-* Kyrgyzstan (kg)
-* Laos (la)
-* Latvia (lv)
-* Lebanon (lb)
-* Lesotho (ls)
-* Liberia (lr)
-* Libya (ly)
-* Liechtenstein (li)
-* Lithuania (lt)
-* Luxembourg (lu)
-* Macao (mo)
-* Macedonia (mk)
-* Madagascar (mg)
-* Malawi (mw)
-* Malaysia (my)
-* Maldives (mv)
-* Mali (ml)
-* Malta (mt)
-* Marshall, Islands (mh)
-* Martinique (mq)
-* Mauricio (mu)
-* Mauritania (mr)
-* Mayotte (yt)
-* Mexico (mx)
-* Micronesia (fm)
-* Moldova (md)
-* Monaco (mc)
-* Mongolia (mn)
-* Montenegro (me)
-* Montserrat (ms)
-* Morocco (ma)
-* Mozambique (mz)
-* Namibia (na)
-* Nauru (nr)
-* Nepal (np)
-* Netherlands Antilles (an)
-* New Caledonia (nc)
-* New Zealand (nz)
-* Nicaragua (ni)
-* Niger (ne)
-* Nigeria (ng)
-* Niue (nu)
-* Norfolk, Island (nf)
-* North Korea (kp)
-* Northern Mariana Islands (mp)
-* Norway (no)
-* Oman (om)
-* Pakistan (pk)
-* Palau (pw)
-* Palestine (ps)
-* Panama (pa)
-* Papua New Guinea (pg)
-* Paraguay (py)
-* Peru (pe)
-* Philippines (ph)
-* Pitcairn (pn)
-* Poland (pl)
-* Portugal (pt)
-* Puerto Rico (pr)
-* Qatar (qa)
-* Republic of the Congo (cg)
-* Romania (ro)
-* Russia (ru)
-* Rwanda (rw)
-* Saint Barthelemy (bl)
-* Saint Helena (sh)
-* Saint Kitts and Nevis (kn)
-* Saint Lucia (lc)
-* Saint Martin (mf)
-* Saint Vincent and the Grenadines (vc)
-* Samoa (ws)
-* San Marino (sm)
-* Sao Tome and Principe (st)
-* Saudi Arabia (sa)
-* Senegal (sn)
-* Serbia (rs)
-* Seychelles (sc)
-* Sierra Leone (sl)
-* Singapore (sg)
-* Slovakia (sk)
-* Slovenia (si)
-* Solomon Islands (sb)
-* Somalia (so)
-* South Africa (za)
-* South Georgia and the South Sandwich Islands (gs)
-* South Korea (kr)
-* South Sudan (ss)
-* Spain (es)
-* Sri Lanka (lk)
-* Sudan (sd)
-* Suriname (sr)
-* Swaziland (sz)
-* Sweden (se)
-* Switzerland (ch)
-* Syria (sy)
-* Taiwan (tw)
-* Tajikistan (tj)
-* Tanzania (tz)
-* Thailand (th)
-* The Netherlands (nl)
-* Togo (tg)
-* Tokelau (tk)
-* Tonga (to)
-* Trinidad and Tobago (tt)
-* Tunisia (tn)
-* Turkey (tr)
-* Turkmenistan (tm)
-* Turks and Caicos Islands (tc)
-* Tuvalu (tv)
-* Uganda (ug)
-* Ukraine (ua)
-* United Arab Emirates (ae)
-* United Kingdom (gb)
-* United States (us)
-* Uruguay (uy)
-* Uzbekistan (uz)
-* Vanuatu (vu)
-* Vatican City (va)
-* Venezuela (ve)
-* Vietnam (vn)
-* Virgin Islands of the United States (vi)
-* Wallis and Futuna (wf)
-* Western Sahara (eh)
-* Yemen (ye)
-* Zambia (zm)
-* Zimbabwe (zw)
+| **Country Name** | **alpha-2** | **alpha-3** |
+|--------------|---------|---------|
+| Afghanistan  | af | afg |
+| Aland Islands  | ax | ala |
+| Albania  | al | alb |
+| Algeria  | dz | dza |
+| American Samoa  | as | asm |
+| Andorra  | ad | and |
+| Angola  | ao | ago |
+| Anguilla  | ai | aia |
+| Antigua and Barbuda  | ag | atg |
+| Argentina  | ar | arg |
+| Armenia  | am | arm |
+| Aruba  | aw | abw |
+| Australia  | au | aus |
+| Austria  | at | aut |
+| Azerbaijan  | az | aze |
+| Bahamas  | bs | bhs |
+| Bahrain  | bh | bhr |
+| Bangladesh  | bd | bgd |
+| Barbados  | bb | brb |
+| Belarus  | by | blr |
+| Belgium  | be | bel |
+| Belize  | bz | blz |
+| Benin  | bj | ben |
+| Bermuda  | bm | bmu |
+| Bhutan  | bt | btn |
+| Bolivia  | bo | bol |
+| Bosnia and Herzegovina  | ba | bih |
+| Botswana  | bw | bwa |
+| Brazil  | br | bra |
+| British Virgin Islands  | vg | vgb |
+| Brunei  | bn | brn |
+| Bulgaria  | bg | bgr |
+| Burkina Faso  | bf | bfa |
+| Burma  | mm | mmr |
+| Burundi  | bi | bdi |
+| Cambodia  | kh | khm |
+| Cameroon  | cm | cmr |
+| Canada  | ca | can |
+| Canary Islands | ic | |
+| Cape Verde  | cv | cpv |
+| Cayman Islands  | ky | cym |
+| Central African Republic  | cf | caf |
+| Chad  | td | tcd |
+| Chile  | cl | chl |
+| China  | cn | chn |
+| Colombia  | co | col |
+| Comoros  | km | com |
+| Cook Islands  | ck | cok |
+| Costa Rica  | cr | cri |
+| Croatia  | hr | hrv |
+| Cuba  | cu | cub |
+| Curacao | cw | cuw |
+| Cyprus  | cy | cyp |
+| Czech Republic  | cz | cze |
+| Democratic Republic of the Congo  | cd | cod |
+| Denmark  | dk | dnk |
+| Djibouti  | dj | dji |
+| Dominica  | dm | dma |
+| Dominican Republic  | do | dom |
+| East Timor  | tl | tls |
+| Ecuador  | ec | ecu |
+| Egypt  | eg | egy |
+| El Salvador  | sv | slv |
+| Equatorial Guinea  | gq | gnq |
+| Eritrea  | er | eri |
+| Estonia  | ee | est |
+| Ethiopia  | et | eth |
+| European Union | eu | |
+| Falkland Islands (Malvinas)  | fk | flk |
+| Faroe Islands  | fo | fro |
+| Fiji  | fj | fji |
+| Finland  | fi | fin |
+| France  | fr | fra |
+| French Polynesia  | pf | pyf |
+| French Southern Territories  | tf | atf |
+| Gabon  | ga | gab |
+| Gambia  | gm | gmb |
+| Georgia  | ge | geo |
+| Germany  | de | deu |
+| Ghana  | gh | gha |
+| Gibraltar  | gi | gib |
+| Granada  | gd | grd |
+| Greece  | gr | grc |
+| Greenland  | gl | grl |
+| Guam  | gu | gum |
+| Guatemala  | gt | gtm |
+| Guernsey  | gg | ggy |
+| Guinea  | gn | gin |
+| Guinea-Bissau  | gw | gnb |
+| Guyana  | gy | guy |
+| Haiti  | ht | hti |
+| Honduras  | hn | hnd |
+| Hong Kong  | hk | hkg |
+| Hungary  | hu | hun |
+| Iceland  | is | isl |
+| India  | in | ind |
+| Indonesia  | id | idn |
+| Iran  | ir | irn |
+| Iraq  | iq | irq |
+| Ireland  | ie | irl |
+| Isle of Man  | im | imn |
+| Israel  | il | isr |
+| Italy  | it | ita |
+| Ivory Coast  | ci | civ |
+| Jamaica  | jm | jam |
+| Japan  | jp | jpn |
+| Jersey  | je | jey |
+| Jordan  | jo | jor |
+| Kazakhstan  | kz | kaz |
+| Kenya  | ke | ken |
+| Kiribati  | ki | kir |
+| Kuwait  | kw | kwt |
+| Kyrgyzstan  | kg | kgz |
+| Laos  | la | lao |
+| Latvia  | lv | lva |
+| Lebanon  | lb | lbn |
+| Lesotho  | ls | lso |
+| Liberia  | lr | lbr |
+| Libya  | ly | lby |
+| Liechtenstein  | li | lie |
+| Lithuania  | lt | ltu |
+| Luxembourg  | lu | lux |
+| Macao  | mo | mac |
+| Macedonia  | mk | mkd |
+| Madagascar  | mg | mdg |
+| Malawi  | mw | mwi |
+| Malaysia  | my | mys |
+| Maldives  | mv | mdv |
+| Mali  | ml | mli |
+| Malta  | mt | mlt |
+| Marshall, Islands  | mh | mhl |
+| Martinique  | mq | mtq |
+| Mauricio  | mu | mus |
+| Mauritania  | mr | mrt |
+| Mayotte  | yt | myt |
+| Mexico  | mx | mex |
+| Micronesia  | fm | fsm |
+| Moldova  | md | mda |
+| Monaco  | mc | mco |
+| Mongolia  | mn | mng |
+| Montenegro  | me | mne |
+| Montserrat  | ms | msr |
+| Morocco  | ma | mar |
+| Mozambique  | mz | moz |
+| Namibia  | na | nam |
+| Nauru  | nr | nru |
+| Nepal  | np | npl |
+| Netherlands Antilles  | an | ant |
+| New Caledonia  | nc | ncl |
+| New Zealand  | nz | nzl |
+| Nicaragua  | ni | nic |
+| Niger  | ne | ner |
+| Nigeria  | ng | nga |
+| Niue  | nu | niu |
+| Norfolk, Island  | nf | nfk |
+| North Korea  | kp | prk |
+| Northern Mariana Islands  | mp | mnp |
+| Norway  | no | nor |
+| Oman  | om | omn |
+| Pakistan  | pk | pak |
+| Palau  | pw | plw |
+| Palestine  | ps | pse |
+| Panama  | pa | pan |
+| Papua New Guinea  | pg | png |
+| Paraguay  | py | pry |
+| Peru  | pe | per |
+| Philippines  | ph | phl |
+| Pitcairn  | pn | pcn |
+| Poland  | pl | pol |
+| Portugal  | pt | prt |
+| Puerto Rico  | pr | pri |
+| Qatar  | qa | qat |
+| Republic of the Congo  | cg | cog |
+| Romania  | ro | rou |
+| Russia  | ru | rus |
+| Rwanda  | rw | rwa |
+| Saint Barthelemy  | bl | blm |
+| Saint Helena  | sh | shn |
+| Saint Kitts and Nevis  | kn | kna |
+| Saint Lucia  | lc | lca |
+| Saint Martin  | mf | maf |
+| Saint Vincent and the Grenadines  | vc | vct |
+| Samoa  | ws | wsm |
+| San Marino  | sm | smr |
+| Sao Tome and Principe  | st | stp |
+| Saudi Arabia  | sa | sau |
+| Senegal  | sn | sen |
+| Serbia  | rs | srb |
+| Seychelles  | sc | syc |
+| Sierra Leone  | sl | sle |
+| Singapore  | sg | sgp |
+| Slovakia  | sk | svk |
+| Slovenia  | si | svn |
+| Solomon Islands  | sb | slb |
+| Somalia  | so | som |
+| South Africa  | za | zaf |
+| South Georgia and the South Sandwich Islands  | gs | sgs |
+| South Korea  | kr | kor |
+| South Sudan  | ss | ssd |
+| Spain  | es | esp |
+| Sri Lanka  | lk | lka |
+| Sudan  | sd | sdn |
+| Suriname  | sr | sur |
+| Swaziland  | sz | swz |
+| Sweden  | se | swe |
+| Switzerland  | ch | che |
+| Syria  | sy | syr |
+| Taiwan  | tw | twn |
+| Tajikistan  | tj | tjk |
+| Tanzania  | tz | tza |
+| Thailand  | th | tha |
+| The Netherlands  | nl | nld |
+| Togo  | tg | tgo |
+| Tokelau  | tk | tkl |
+| Tonga  | to | ton |
+| Trinidad and Tobago  | tt | tto |
+| Tunisia  | tn | tun |
+| Turkey  | tr | tur |
+| Turkmenistan  | tm | tkm |
+| Turks and Caicos Islands  | tc | tca |
+| Tuvalu  | tv | tuv |
+| Uganda  | ug | uga |
+| Ukraine  | ua | ukr |
+| United Arab Emirates  | ae | are |
+| United Kingdom  | gb | gbr |
+| United States  | us | usa |
+| Uruguay  | uy | ury |
+| Uzbekistan  | uz | uzb |
+| Vanuatu  | vu | vut |
+| Vatican City  | va | vat |
+| Venezuela  | ve | ven |
+| Vietnam  | vn | vnm |
+| Virgin Islands of the United States  | vi | vir |
+| Wallis and Futuna  | wf | wlf |
+| Western Sahara  | eh | esh |
+| Yemen  | ye | yem |
+| Zambia  | zm | zmb |
+| Zimbabwe  | zw | zwe |
 
 
 ## Credits

@@ -1,5 +1,5 @@
 <template>
-    <span :class="flagIconClass" :style="flagStyle"></span>
+    <span :class="flagIconClass" :style="flagStyle" v-if="country"></span>
 </template>
 
 <script>
@@ -12,14 +12,15 @@ export default {
       type: String,
       required: true,
       validator: function (value) {
-        return value.length === 2
+        return value.length === 2 || value.length === 3
       }
     },
     size: {
       type: String,
       validator: function(value) {
-        return value === "small" || value === "normal" || value === "big"
-      }
+        return value === 'small' || value === 'normal' || value === 'big'
+      },
+      default: 'normal'
     }
   },
   computed: {
