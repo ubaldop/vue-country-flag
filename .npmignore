@@ -1,1 +1,5 @@
+node_modules
 assets/logo.png
+__tests__
+.babelrc
+jest.config.js
