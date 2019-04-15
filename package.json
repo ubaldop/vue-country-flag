@@ -1,6 +1,6 @@
 {
   "name": "vue-country-flag",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple Vue component for displaying of country flags",
   "main": "CountryFlag.vue",
   "scripts": {
