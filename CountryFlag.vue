@@ -1,5 +1,5 @@
 <template>
-    <span :class="flagIconClass" :style="flagStyle" v-if="country"></span>
+    <span :class="flagIconClass" v-if="country"></span>
 </template>
 
 <script>
@@ -33,21 +33,6 @@ export default {
     flagIconCountry () {
       return `flag-${this.country.toLowerCase()}`
     },
-    flagWidth () {
-      switch (this.size) {
-        case 'small':
-            return '16' 
-        case 'normal':
-            return '32'
-        case 'big':
-            return '64'
-        default:
-            return '32'
-      }
-    },
-    flagStyle () {
-      return `transform: scale(calc(${this.flagWidth} / 64));`
-    },
     flagMargin () {
       switch (this.size) {
         case 'small':
@@ -67,13 +52,25 @@ export default {
   .small-flag {
     margin-left: -24px;
     margin-right: -24px;
+    transform: scale(0.25);
+    -ms-transform: scale(0.25); 
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
   }
   .normal-flag {
     margin-left: -16px;
     margin-right: -16px;
+    transform: scale(0.5);
+    -ms-transform: scale(0.5); 
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
   }
   .big-flag {
     margin-right: 0;
     margin-left: 0;
+    transform: scale(1);
+    -ms-transform: scale(1); 
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
   }
 </style>
