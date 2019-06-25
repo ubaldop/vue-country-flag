@@ -4,4 +4,4 @@ __tests__
 .babelrc
 jest.config.js
 css/flags/flags.png
-css/flags/flags.min.png
+css/flags/flags-min.png
