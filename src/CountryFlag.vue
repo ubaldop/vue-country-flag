@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import 'vue-country-flag/css/flags/flags.min.css'
+import './css/flags/flags.min.css'
 
 export default {
   name: 'CountryFlag',

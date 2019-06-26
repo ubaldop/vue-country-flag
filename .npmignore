@@ -3,5 +3,5 @@ assets/logo.png
 __tests__
 .babelrc
 jest.config.js
-css/flags/flags.png
-css/flags/flags-min.png
+src/flags-min.png
+src/flags.png

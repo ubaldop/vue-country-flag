@@ -1,7 +1,7 @@
 import {
     shallowMount, config
 } from '@vue/test-utils'
-import CountryFlag from '../CountryFlag'
+import CountryFlag from '../src/CountryFlag'
 
 const countriesMappings = {
     af: 'afg',
