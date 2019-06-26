@@ -5,9 +5,9 @@ _Country flags as a Vue Component_
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@1.2.2" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@1.2.3" alt="Install size">
   <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.2.2-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-1.2.3-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
 
