@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="keywords" content="country flag Flag component flags Flags countries Country Countries GitHub github Vue vue">
+    <meta name="description" content="Vue Country flags component">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <style>
+    .evenRow {
+        background-color: lightgrey;
+    }
+    </style>
+</head>
+<title>vue-country-flag Demo</title>
+<body>
+    <header class="header">
+        <div class="content has-text-centered">
+            <img src="assets/logo.png" alt="vue-country-flag" />
+
+            <h4 class="title is-4 is-spaced">Vue component for country flags</h4>
+
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="bd-footer-iframe is-github">
+                            <a class="github-button" href="https://github.com/P3trur0/vue-country-flag" data-show-count="true"
+                                aria-label="Star p3trur0/vue-country-flag on GitHub">Star</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+    </header>
+
+    <div class="container">
+        <div class='columns is-centered'>
+            <h5 class="title is-4">Properties</h5>
+        </div>
+    
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <table class='table is-centered is-bordered is-striped'>
+                        <thead>
+                            <tr>
+                                <th><strong>Properties</strong></th>
+                                <th><strong>Default</strong></th>
+                                <th><strong>Description</strong></th>
+                                <th><strong>Type</strong></th>
+                                <th><strong>Mandatory</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>country</strong></td>
+                                <td></td>
+                                <td><em>ISO 3166-1 identifier of the country</em></td>
+                                <td>String</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>size</strong></td>
+                                <td><code>normal</code></td>
+                                <td><em><code>small</code>, <code>normal</code>, <code>big</code></em></td>
+                                <td>String</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div id='app' :class="['columns', 'is-centered', 'is-3']">
+        <div>
+            <Ribbon text='I am on GitHub!' :fixed="true" url='https://github.com/P3trur0/vue-country-flag' />
+        </div>
+        <div>
+            <Ribbon text='ISO 3166-1 compliant' :fixed="true" color='#3fba84' position='left-top' url='https://en.wikipedia.org/wiki/ISO_3166-1' /> 
+        </div>
+        <div :class="['content', 'has-text-centered']">
+            <table class='table is-centered is-bordered is-striped'>
+                <thead>
+                    <th class='has-text-centered'>Country</th>
+                    <th class='has-text-centered'>Value</th>
+                    <th class='has-text-centered'>Small</th>
+                    <th class='has-text-centered'>Normal</th>
+                    <th class='has-text-centered'>Big</th>
+                </thead>
+                <tbody>
+                    <tr v-for="(country, index) in countries" :key="country.flag" :class="[index % 2 === 0 ? 'evenRow' : 'oddRow']">
+                        <td class='has-text-centered'>{{country.country}}</td>
+                        <td class='has-text-centered'>{{country.flag}}</td>
+                        <td class='has-text-centered'>
+                            <country-flag :country="country.flag" size="small" />
+                        </td>
+                        <td class='has-text-centered'>
+                            <country-flag :country="country.flag" />
+                        </td>
+                        <td class='has-text-centered'>
+                            <country-flag :country="country.flag" size="big" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer class="footer has-background-white">
+        <div class="content has-text-centered">
+            <p>
+                <strong>vue-country-flag</strong> is crafted with love by <a href="https://githb.com/P3trur0">P3trur0</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-country-flag@1.2.3"></script>
+<script src="https://unpkg.com/vue-ribbon"></script>
+<script src="https://buttons.github.io/buttons.js"></script>
+<script>
+    Vue.config.productionTip = false
+    new Vue({
+        el: '#app',
+        data: {
+            countries: [
+                { country: "Afghanistan", flag: "af" },
+                { country: "Aland Islands", flag: "ax" },
+                { country: "Albania", flag: "al" },
+                { country: "Algeria", flag: "dz" },
+                { country: "American Samoa", flag: "as" },
+                { country: "Andorra", flag: "ad" },
+                { country: "Angola", flag: "ao" },
+                { country: "Anguilla", flag: "ai" },
+                { country: "Antigua and Barbuda", flag: "ag" },
+                { country: "Argentina", flag: "ar" },
+                { country: "Armenia", flag: "am" },
+                { country: "Aruba", flag: "aw" },
+                { country: "Australia", flag: "au" },
+                { country: "Austria", flag: "at" },
+                { country: "Azerbaijan", flag: "az" },
+                { country: "Bahamas", flag: "bs" },
+                { country: "Bahrain", flag: "bh" },
+                { country: "Bangladesh", flag: "bd" },
+                { country: "Barbados", flag: "bb" },
+                { country: "Belarus", flag: "by" },
+                { country: "Belgium", flag: "be" },
+                { country: "Belize", flag: "bz" },
+                { country: "Benin", flag: "bj" },
+                { country: "Bermuda", flag: "bm" },
+                { country: "Bhutan", flag: "bt" },
+                { country: "Bolivia", flag: "bo" },
+                { country: "Bosnia and Herzegovina", flag: "ba" },
+                { country: "Botswana", flag: "bw" },
+                { country: "Brazil", flag: "br" },
+                { country: "British Virgin Islands", flag: "vg" },
+                { country: "Brunei", flag: "bn" },
+                { country: "Bulgaria", flag: "bg" },
+                { country: "Burkina Faso", flag: "bf" },
+                { country: "Burma", flag: "mm" },
+                { country: "Burundi", flag: "bi" },
+                { country: "Cambodia", flag: "kh" },
+                { country: "Cameroon", flag: "cm" },
+                { country: "Canada", flag: "ca" },
+                { country: "Canary Islands", flag: "ic" },
+                { country: "Cape Verde", flag: "cv" },
+                { country: "Cayman Islands", flag: "ky" },
+                { country: "Central African Republic", flag: "cf" },
+                { country: "Chad", flag: "td" },
+                { country: "Chile", flag: "cl" },
+                { country: "China", flag: "cn" },
+                { country: "Colombia", flag: "co" },
+                { country: "Comoros", flag: "km" },
+                { country: "Cook Islands", flag: "ck" },
+                { country: "Costa Rica", flag: "cr" },
+                { country: "Croatia", flag: "hr" },
+                { country: "Cuba", flag: "cu" },
+                { country: "Curacao", flag: "cw" },
+                { country: "Cyprus", flag: "cy" },
+                { country: "Czech Republic", flag: "cz" },
+                { country: "Democratic Republic of the Congo", flag: "cd" },
+                { country: "Denmark", flag: "dk" },
+                { country: "Djibouti", flag: "dj" },
+                { country: "Dominica", flag: "dm" },
+                { country: "Dominican Republic", flag: "do" },
+                { country: "East Timor", flag: "tl" },
+                { country: "Ecuador", flag: "ec" },
+                { country: "Egypt", flag: "eg" },
+                { country: "El Salvador", flag: "sv" },
+                { country: "Equatorial Guinea", flag: "gq" },
+                { country: "Eritrea", flag: "er" },
+                { country: "Estonia", flag: "ee" },
+                { country: "Ethiopia", flag: "et" },
+                { country: "European Union", flag: "eu" },
+                { country: "Falkland Islands", flag: "fk" },
+                { country: "Faroe Islands", flag: "fo" },
+                { country: "Fiji", flag: "fj" },
+                { country: "Finland", flag: "fi" },
+                { country: "France", flag: "fr" },
+                { country: "French Polynesia", flag: "pf" },
+                { country: "French Southern Territories", flag: "tf" },
+                { country: "Gabon", flag: "ga" },
+                { country: "Gambia", flag: "gm" },
+                { country: "Georgia", flag: "ge" },
+                { country: "Germany", flag: "de" },
+                { country: "Ghana", flag: "gh" },
+                { country: "Gibraltar", flag: "gi" },
+                { country: "Granada", flag: "gd" },
+                { country: "Greece", flag: "gr" },
+                { country: "Greenland", flag: "gl" },
+                { country: "Guam", flag: "gu" },
+                { country: "Guatemala", flag: "gt" },
+                { country: "Guernsey", flag: "gg" },
+                { country: "Guinea", flag: "gn" },
+                { country: "Guinea-Bissau", flag: "gw" },
+                { country: "Guyana", flag: "gy" },
+                { country: "Haiti", flag: "ht" },
+                { country: "Honduras", flag: "hn" },
+                { country: "Hong Kong", flag: "hk" },
+                { country: "Hungary", flag: "hu" },
+                { country: "Iceland", flag: "is" },
+                { country: "India", flag: "in" },
+                { country: "Indonesia", flag: "id" },
+                { country: "Iran", flag: "ir" },
+                { country: "Iraq", flag: "iq" },
+                { country: "Ireland", flag: "ie" },
+                { country: "Isle of Man", flag: "im" },
+                { country: "Israel", flag: "il" },
+                { country: "Italy", flag: "it" },
+                { country: "Ivory Coast", flag: "ci" },
+                { country: "Jamaica", flag: "jm" },
+                { country: "Japan", flag: "jp" },
+                { country: "Jersey", flag: "je" },
+                { country: "Jordan", flag: "jo" },
+                { country: "Kazakhstan", flag: "kz" },
+                { country: "Kenya", flag: "ke" },
+                { country: "Kiribati", flag: "ki" },
+                { country: "Kuwait", flag: "kw" },
+                { country: "Kyrgyzstan", flag: "kg" },
+                { country: "Laos", flag: "la" },
+                { country: "Latvia", flag: "lv" },
+                { country: "Lebanon", flag: "lb" },
+                { country: "Lesotho", flag: "ls" },
+                { country: "Liberia", flag: "lr" },
+                { country: "Libya", flag: "ly" },
+                { country: "Liechtenstein", flag: "li" },
+                { country: "Lithuania", flag: "lt" },
+                { country: "Luxembourg", flag: "lu" },
+                { country: "Macao", flag: "mo" },
+                { country: "Macedonia", flag: "mk" },
+                { country: "Madagascar", flag: "mg" },
+                { country: "Malawi", flag: "mw" },
+                { country: "Malaysia", flag: "my" },
+                { country: "Maldives", flag: "mv" },
+                { country: "Mali", flag: "ml" },
+                { country: "Malta", flag: "mt" },
+                { country: "Marshall, Islands", flag: "mh" },
+                { country: "Martinique", flag: "mq" },
+                { country: "Mauricio", flag: "mu" },
+                { country: "Mauritania", flag: "mr" },
+                { country: "Mayotte", flag: "yt" },
+                { country: "Mexico", flag: "mx" },
+                { country: "Micronesia", flag: "fm" },
+                { country: "Moldova", flag: "md" },
+                { country: "Monaco", flag: "mc" },
+                { country: "Mongolia", flag: "mn" },
+                { country: "Montenegro", flag: "me" },
+                { country: "Montserrat", flag: "ms" },
+                { country: "Morocco", flag: "ma" },
+                { country: "Mozambique", flag: "mz" },
+                { country: "Namibia", flag: "na" },
+                { country: "Nauru", flag: "nr" },
+                { country: "Nepal", flag: "np" },
+                { country: "Netherlands Antilles", flag: "an" },
+                { country: "New Caledonia", flag: "nc" },
+                { country: "New Zealand", flag: "nz" },
+                { country: "Nicaragua", flag: "ni" },
+                { country: "Niger", flag: "ne" },
+                { country: "Nigeria", flag: "ng" },
+                { country: "Niue", flag: "nu" },
+                { country: "Norfolk, Island", flag: "nf" },
+                { country: "North Korea", flag: "kp" },
+                { country: "Northern Mariana Islands", flag: "mp" },
+                { country: "Norway", flag: "no" },
+                { country: "Oman", flag: "om" },
+                { country: "Pakistan", flag: "pk" },
+                { country: "Palau", flag: "pw" },
+                { country: "Palestine", flag: "ps" },
+                { country: "Panama", flag: "pa" },
+                { country: "Papua New Guinea", flag: "pg" },
+                { country: "Paraguay", flag: "py" },
+                { country: "Peru", flag: "pe" },
+                { country: "Philippines", flag: "ph" },
+                { country: "Pitcairn", flag: "pn" },
+                { country: "Poland", flag: "pl" },
+                { country: "Portugal", flag: "pt" },
+                { country: "Puerto Rico", flag: "pr" },
+                { country: "Qatar", flag: "qa" },
+                { country: "Republic of the Congo", flag: "cg" },
+                { country: "Romania", flag: "ro" },
+                { country: "Russia", flag: "ru" },
+                { country: "Rwanda", flag: "rw" },
+                { country: "Saint Barthelemy", flag: "bl" },
+                { country: "Saint Helena", flag: "sh" },
+                { country: "Saint Kitts and Nevis", flag: "kn" },
+                { country: "Saint Lucia", flag: "lc" },
+                { country: "Saint Martin", flag: "mf" },
+                { country: "Saint Vincent and the Grenadines", flag: "vc" },
+                { country: "Samoa", flag: "ws" },
+                { country: "San Marino", flag: "sm" },
+                { country: "Sao Tome and Principe", flag: "st" },
+                { country: "Saudi Arabia", flag: "sa" },
+                { country: "Senegal", flag: "sn" },
+                { country: "Serbia", flag: "rs" },
+                { country: "Seychelles", flag: "sc" },
+                { country: "Sierra Leone", flag: "sl" },
+                { country: "Singapore", flag: "sg" },
+                { country: "Slovakia", flag: "sk" },
+                { country: "Slovenia", flag: "si" },
+                { country: "Solomon Islands", flag: "sb" },
+                { country: "Somalia", flag: "so" },
+                { country: "South Africa", flag: "za" },
+                { country: "South Georgia and the South Sandwich Islands", flag: "gs" },
+                { country: "South Korea", flag: "kr" },
+                { country: "South Sudan", flag: "ss" },
+                { country: "Spain", flag: "es" },
+                { country: "Sri Lanka", flag: "lk" },
+                { country: "Sudan", flag: "sd" },
+                { country: "Suriname", flag: "sr" },
+                { country: "Swaziland", flag: "sz" },
+                { country: "Sweden", flag: "se" },
+                { country: "Switzerland", flag: "ch" },
+                { country: "Syria", flag: "sy" },
+                { country: "Taiwan", flag: "tw" },
+                { country: "Tajikistan", flag: "tj" },
+                { country: "Tanzania", flag: "tz" },
+                { country: "Thailand", flag: "th" },
+                { country: "The Netherlands", flag: "nl" },
+                { country: "Togo", flag: "tg" },
+                { country: "Tokelau", flag: "tk" },
+                { country: "Tonga", flag: "to" },
+                { country: "Trinidad and Tobago", flag: "tt" },
+                { country: "Tunisia", flag: "tn" },
+                { country: "Turkey", flag: "tr" },
+                { country: "Turkmenistan", flag: "tm" },
+                { country: "Turks and Caicos Islands", flag: "tc" },
+                { country: "Tuvalu", flag: "tv" },
+                { country: "Uganda", flag: "ug" },
+                { country: "Ukraine", flag: "ua" },
+                { country: "United Arab Emirates", flag: "ae" },
+                { country: "United Kingdom", flag: "gb" },
+                { country: "United States", flag: "us" },
+                { country: "Uruguay", flag: "uy" },
+                { country: "Uzbekistan", flag: "uz" },
+                { country: "Vanuatu", flag: "vu" },
+                { country: "Vatican City", flag: "va" },
+                { country: "Venezuela", flag: "ve" },
+                { country: "Vietnam", flag: "vn" },
+                { country: "Virgin Islands of the United States", flag: "vi" },
+                { country: "Wallis and Futuna", flag: "wf" },
+                { country: "Western Sahara", flag: "eh" },
+                { country: "Yemen", flag: "ye" },
+                { country: "Zambia", flag: "zm" },
+                { country: "Zimbabwe", flag: "zw" }
+            ]
+        }
+    });
+</script>
+
+</html>
