@@ -87,22 +87,24 @@
                 <thead>
                     <th class='has-text-centered'>Country</th>
                     <th class='has-text-centered'>Value</th>
-                    <th class='has-text-centered'>Small</th>
-                    <th class='has-text-centered'>Normal</th>
-                    <th class='has-text-centered'>Big</th>
+                    <th class='has-text-centered'>Flag</th>
                 </thead>
                 <tbody>
                     <tr v-for="(country, index) in countries" :key="country.flag" :class="[index % 2 === 0 ? 'evenRow' : 'oddRow']">
                         <td class='has-text-centered'>{{country.country}}</td>
                         <td class='has-text-centered'>{{country.flag}}</td>
                         <td class='has-text-centered'>
-                            <country-flag :country="country.flag" size="small" />
-                        </td>
-                        <td class='has-text-centered'>
-                            <country-flag :country="country.flag" />
-                        </td>
-                        <td class='has-text-centered'>
-                            <country-flag :country="country.flag" size="big" />
+                            <div>
+                                <country-flag :country="country.flag" size="small" />
+                            </div>  
+                            
+                             <div>
+                                <country-flag :country="country.flag" />
+                            </div>  
+                            
+                             <div>
+                                <country-flag :country="country.flag" size="big" />
+                            </div>  
                         </td>
                     </tr>
                 </tbody>
