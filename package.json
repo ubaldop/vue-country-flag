@@ -10,10 +10,10 @@
     "src/**/*.vue"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build": "tsc && cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "tsc && cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "tsc && cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "tsc && cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
     "test": "jest"
   },
   "repository": {
@@ -35,7 +35,9 @@
     "url": "https://github.com/P3trur0/vue-country-flag/issues"
   },
   "homepage": "https://github.com/P3trur0/vue-country-flag/",
-  "dependencies": {},
+  "dependencies": {
+    "typescript": "^3.5.3"
+  },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^6.26.3",
