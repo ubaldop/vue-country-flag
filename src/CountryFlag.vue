@@ -50,24 +50,21 @@ export default {
 </script>
 <style scoped>
   .small-flag {
-    margin-left: -24px;
-    margin-right: -24px;
+    margin: -24px;
     transform: scale(0.25);
     -ms-transform: scale(0.25); 
     -webkit-transform: scale(0.25);
     -moz-transform: scale(0.25);
   }
   .normal-flag {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin: -16px;
     transform: scale(0.5);
     -ms-transform: scale(0.5); 
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
   }
   .big-flag {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
     transform: scale(1);
     -ms-transform: scale(1); 
     -webkit-transform: scale(1);
