@@ -77,7 +77,7 @@ by default, the flag is displayed at *normal* size.
 ## Available Flags
 
 Here follows the list of the available flags. They are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) standard.  
-This component currently support both **alpha-2** and **alpha-3** alternatives of the standard.  
+This component currently supports both **alpha-2** and **alpha-3** alternatives of the standard.  
 
 | **Country Name** | **alpha-2** | **alpha-3** |
 |--------------|---------|---------|
