@@ -32,7 +32,7 @@ Register `CountryFlag` component in your app. You can use two approaches:
 import Vue from 'vue'
 import CountryFlag from 'vue-country-flag'
 
-Vue.component('vue-country-flag', CountryFlag)
+Vue.component('country-flag', CountryFlag)
 
 ```
 
