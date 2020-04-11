@@ -10,10 +10,11 @@ export default {
   props: {
     country: {
       type: String,
-      required: true,
-      validator: function (value) {
-        return value.length === 2 || value.length === 3
-      }
+      required: true
+    },
+    rounded: {
+      type: Boolean,
+      default: false
     },
     size: {
       type: String,
@@ -26,12 +27,13 @@ export default {
   computed: {
     flagIconClass () {
       return {
-        [`flag ${this.flagIconCountry}`]: true,
+        [`f ${this.flagIconCountry}`]: true,
+        [`rounded`]: this.rounded,
         [this.flagMargin]: true
       }
     },
     flagIconCountry () {
-      return `flag-${this.country.toLowerCase()}`
+      return `f-${this.country.toLowerCase()}`
     },
     flagMargin () {
       switch (this.size) {
@@ -50,14 +52,12 @@ export default {
 </script>
 <style scoped>
   .small-flag {
-    margin: -24px;
     transform: scale(0.25);
     -ms-transform: scale(0.25); 
     -webkit-transform: scale(0.25);
     -moz-transform: scale(0.25);
   }
   .normal-flag {
-    margin: -16px;
     transform: scale(0.5);
     -ms-transform: scale(0.5); 
     -webkit-transform: scale(0.5);
@@ -65,9 +65,17 @@ export default {
   }
   .big-flag {
     margin: 0;
-    transform: scale(1);
-    -ms-transform: scale(1); 
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
+  }
+  .small-flag.rounded {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+  }
+  .normal-flag.rounded {
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .big-flag.rounded {
+    -moz-border-radius: 8px;
+    border-radius: 8px;
   }
 </style>

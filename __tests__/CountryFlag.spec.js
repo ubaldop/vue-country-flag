@@ -259,10 +259,11 @@ const buildNormalFlag = (country) => {
     }
 }
 
-const buildFlag = (country, size) => {
+const buildFlag = (country, size, rounded) => {
     return {
         country: country,
-        size: size
+        size: size,
+        rounded: rounded || false
     }
 }
 
@@ -295,29 +296,45 @@ describe('CountryFlag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildNormalFlag('it')
             });
-            expect(flag.attributes('class')).toBe('flag flag-it normal-flag');
+            expect(flag.attributes('class')).toBe('f f-it normal-flag');
         })
 
         test('big size of country-flag should return a big flag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildFlag('se', 'big')
             });
-            expect(flag.attributes('class')).toBe('flag flag-se big-flag');
+            expect(flag.attributes('class')).toBe('f f-se big-flag');
         })
+
+        test("big size of rounded country-flag should return a rounded big flag", () => {
+          const flag = shallowMount(CountryFlag, {
+            propsData: buildFlag("se", "big", true)
+          });
+          expect(flag.attributes("class")).toBe(
+            "f f-se rounded big-flag"
+          );
+        });
 
         test('small size of country-flag should return a small flag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildFlag('se', 'small')
             });
-            expect(flag.attributes('class')).toBe('flag flag-se small-flag');
+            expect(flag.attributes('class')).toBe('f f-se small-flag');
         })
 
-        test('normal size of country-flag should return a normal flag', () => {
+        test("normal size of country-flag should return a normal flag", () => {
+          const flag = shallowMount(CountryFlag, {
+            propsData: buildFlag("se", "normal")
+          });
+          expect(flag.attributes("class")).toBe("f f-se normal-flag");
+        }),
+
+        test("[CAPITAL LETTER lowercase conversion] normal size of country-flag should return a normal flag", () => {
             const flag = shallowMount(CountryFlag, {
-                propsData: buildFlag('se', 'normal')
+              propsData: buildFlag("SE", "normal")
             });
-            expect(flag.attributes('class')).toBe('flag flag-se normal-flag');
-        })
+            expect(flag.attributes("class")).toBe("f f-se normal-flag");
+          });
     });
 
     describe('CountryFlag ISO-3166-1 alpha-3 support', () => {
@@ -325,7 +342,7 @@ describe('CountryFlag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildNormalFlag(convertToISOAlphaThree('it'))
             });
-            expect(flag.attributes('class')).toBe('flag flag-ita normal-flag');
+            expect(flag.attributes('class')).toBe('f f-ita normal-flag');
         })
 
         test('it should map both two and three characters for all the countries', () => {
@@ -342,8 +359,8 @@ describe('CountryFlag', () => {
                         propsData: buildNormalFlag(threeCharsIdentifier)
                     });
 
-                    expect(flagTwo.attributes('class')).toBe('flag flag-' + twoCharsIdentifier + ' normal-flag');
-                    expect(flagThree.attributes('class')).toBe('flag flag-' + threeCharsIdentifier + ' normal-flag');
+                    expect(flagTwo.attributes('class')).toBe('f f-' + twoCharsIdentifier + ' normal-flag');
+                    expect(flagThree.attributes('class')).toBe('f f-' + threeCharsIdentifier + ' normal-flag');
                 }
             }
         })
