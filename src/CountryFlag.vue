@@ -27,13 +27,15 @@ export default {
   computed: {
     flagIconClass () {
       return {
-        [`f ${this.flagIconCountry}`]: true,
+        [`flag ${this.flagIconCountry}`]: true,
         [`rounded`]: this.rounded,
         [this.flagMargin]: true
       }
     },
     flagIconCountry () {
-      return `f-${this.country.toLowerCase()}`
+      let country = this.country.toLowerCase() 
+      country = (country === 'ad') ? 'andorra' : country
+      return `f-${country}`
     },
     flagMargin () {
       switch (this.size) {
