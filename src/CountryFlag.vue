@@ -33,7 +33,9 @@ export default {
       }
     },
     flagIconCountry () {
-      return `f-${this.country.toLowerCase()}`
+      let country = this.country.toLowerCase() 
+      country = (country === 'ad') ? 'andorra' : country
+      return `f-${country}`
     },
     flagMargin () {
       switch (this.size) {
