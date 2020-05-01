@@ -27,7 +27,7 @@ export default {
   computed: {
     flagIconClass () {
       return {
-        [`f ${this.flagIconCountry}`]: true,
+        [`flag ${this.flagIconCountry}`]: true,
         [`rounded`]: this.rounded,
         [this.flagMargin]: true
       }

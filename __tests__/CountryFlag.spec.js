@@ -271,6 +271,11 @@ const convertToISOAlphaThree = (country) => {
     return countriesMappings[country]
 };
 
+//see issue-27
+const convertAndorraTwoDigitsToAndorra = (country) => {
+    return (country === 'ad') ? 'andorra' : country
+}
+
 
 
 describe('CountryFlag', () => {
@@ -296,14 +301,14 @@ describe('CountryFlag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildNormalFlag('it')
             });
-            expect(flag.attributes('class')).toBe('f f-it normal-flag');
+            expect(flag.attributes('class')).toBe('flag f-it normal-flag');
         })
 
         test('big size of country-flag should return a big flag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildFlag('se', 'big')
             });
-            expect(flag.attributes('class')).toBe('f f-se big-flag');
+            expect(flag.attributes('class')).toBe('flag f-se big-flag');
         })
 
         test("big size of rounded country-flag should return a rounded big flag", () => {
@@ -311,7 +316,7 @@ describe('CountryFlag', () => {
             propsData: buildFlag("se", "big", true)
           });
           expect(flag.attributes("class")).toBe(
-            "f f-se rounded big-flag"
+            "flag f-se rounded big-flag"
           );
         });
 
@@ -319,21 +324,21 @@ describe('CountryFlag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildFlag('se', 'small')
             });
-            expect(flag.attributes('class')).toBe('f f-se small-flag');
+            expect(flag.attributes('class')).toBe('flag f-se small-flag');
         })
 
         test("normal size of country-flag should return a normal flag", () => {
           const flag = shallowMount(CountryFlag, {
             propsData: buildFlag("se", "normal")
           });
-          expect(flag.attributes("class")).toBe("f f-se normal-flag");
+          expect(flag.attributes("class")).toBe("flag f-se normal-flag");
         }),
 
         test("[CAPITAL LETTER lowercase conversion] normal size of country-flag should return a normal flag", () => {
             const flag = shallowMount(CountryFlag, {
               propsData: buildFlag("SE", "normal")
             });
-            expect(flag.attributes("class")).toBe("f f-se normal-flag");
+            expect(flag.attributes("class")).toBe("flag f-se normal-flag");
           });
     });
 
@@ -342,13 +347,13 @@ describe('CountryFlag', () => {
             const flag = shallowMount(CountryFlag, {
                 propsData: buildNormalFlag(convertToISOAlphaThree('it'))
             });
-            expect(flag.attributes('class')).toBe('f f-ita normal-flag');
+            expect(flag.attributes('class')).toBe('flag f-ita normal-flag');
         })
 
         test('it should map both two and three characters for all the countries', () => {
             for (let country in countriesMappings) {
                 if (countriesMappings.hasOwnProperty(country)) {
-                    let twoCharsIdentifier = country;
+                    let twoCharsIdentifier = convertAndorraTwoDigitsToAndorra(country);
                     let threeCharsIdentifier = countriesMappings[country];
 
                     const flagTwo = shallowMount(CountryFlag, {
@@ -359,8 +364,8 @@ describe('CountryFlag', () => {
                         propsData: buildNormalFlag(threeCharsIdentifier)
                     });
 
-                    expect(flagTwo.attributes('class')).toBe('f f-' + twoCharsIdentifier + ' normal-flag');
-                    expect(flagThree.attributes('class')).toBe('f f-' + threeCharsIdentifier + ' normal-flag');
+                    expect(flagTwo.attributes('class')).toBe('flag f-' + twoCharsIdentifier + ' normal-flag');
+                    expect(flagThree.attributes('class')).toBe('flag f-' + threeCharsIdentifier + ' normal-flag');
                 }
             }
         })
