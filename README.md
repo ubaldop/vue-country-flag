@@ -5,12 +5,12 @@ _Country flags as a Vue Component_
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.1" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.2" alt="Install size">
   <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.0.1-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.0.2-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Supported">
-  
+
 </p>
 
 ## How to install
@@ -76,8 +76,8 @@ by default, the flag is displayed at *normal* size.
 
 
 ## Available Flags
-The flags are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) standard.  
-This component currently supports both **alpha-2** and **alpha-3** alternatives.  
+The flags are identified using the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) standard.
+This component currently supports both **alpha-2** and **alpha-3** alternatives.
 
 | **Country Name** | **alpha-2** | **alpha-3** |
 |--------------|---------|---------|
