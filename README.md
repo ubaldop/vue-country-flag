@@ -5,9 +5,9 @@ _Country flags as a Vue Component_
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.2" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.3" alt="Install size">
   <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.0.2-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.0.3-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Supported">
   
@@ -290,6 +290,7 @@ This component currently supports both **alpha-2** and **alpha-3** alternatives.
 | South Africa | za | zaf |
 | South Georgia and the South Sandwich Islands | gs | sgs |
 | South Sudan | ss | ssd |
+| Soviet Union | su | sun |
 | Spain | es | esp |
 | Sri Lanka | lk | lka |
 | Sudan | sd | sdn |
