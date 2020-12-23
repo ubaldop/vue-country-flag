@@ -15,5 +15,7 @@ export default defineComponent({
     Hello from Vue3
     <CountryFlag country='it' size="big"/>
     <CountryFlag country='fr' size="small"/>
+    <CountryFlag country='is'/>
+    <CountryFlag country='sun'/>
   </div>
 </template>
