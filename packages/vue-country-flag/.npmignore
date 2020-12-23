@@ -1,0 +1,9 @@
+node_modules
+assets/logo.png
+__tests__
+.babelrc
+jest.config.js
+src/flags-min.png
+src/flags.png
+typedefs
+dev
