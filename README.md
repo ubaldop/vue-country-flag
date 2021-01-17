@@ -20,7 +20,6 @@ Since version 2.0.3, this component supports both Vue2 and Vue3 support.
 
 In order to use it with Vue 3, please install the `vue-country-flag-next` package as follows:
 
-
 ```bash
 npm install vue-country-flag-next
 ```
@@ -35,7 +34,7 @@ Get the package from NPM:
 npm install vue-country-flag
 ```
 
-## How to use with
+## How to use the component
 
 Register `CountryFlag` component in your app. You can use two approaches:
 
