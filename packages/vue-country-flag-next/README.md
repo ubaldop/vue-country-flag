@@ -1,56 +1,31 @@
 # vue-country-flag
-_Country flags as a Vue Component_
+_Country flags as a Vue 3 Component_
 
 <p align="center">
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
   <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.3" alt="Install size">
-  <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
-  <img src="https://img.shields.io/badge/Vue.js%203-compatible-green.svg" alt="Vue.js 3 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.0.3-blue.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
+    <img src="https://img.shields.io/badge/Vue.js%203-compatible-green.svg" alt="Vue.js 3 compatible">
+  <a href="https://www.npmjs.com/package/vue-country-flag-next"><img src="https://img.shields.io/badge/npm-2.0.3-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag-next"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Supported">
   
 </p>
-
-## Vue 3 support
-
-Since version 2.0.3, this component supports both Vue2 and Vue3 support.
-
-In order to use it with Vue 3, please install the `vue-country-flag-next` package as follows:
-
-```bash
-npm install vue-country-flag-next
-```
-
-## Vue 2 support
 
 ## How to install
 
 Get the package from NPM:
 
 ```bash
-npm install vue-country-flag
+npm install vue-country-flag-next
 ```
 
-## How to use the component
+## How to use
 
-Register `CountryFlag` component in your app. You can use two approaches:
+Import `CountryFlag` component in your app, for example:
 
 - in `main.js` you can mount it as a global Vue component:
-
-```js
-
-import Vue from 'vue'
-import CountryFlag from 'vue-country-flag'
-
-Vue.component('country-flag', CountryFlag)
-
-```
-
-- in a specific component (e.g.: `Component.vue`):
-
 
 ```js
 import CountryFlag from 'vue-country-flag'
