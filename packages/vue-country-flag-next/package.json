@@ -1,11 +1,11 @@
 {
   "name": "vue-country-flag-next",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Simple Vue component for displaying of country flags",
   "main": "dist/country-flag.ssr.js",
-  "browser": "dist/country-flag.esm.js",
-  "module": "dist/country-flag.esm.js",
-  "unpkg": "dist/country-flag.min.js",
+  "browser": "dist/CountryFlag.esm.js",
+  "module": "dist/CountryFlag.esm.js",
+  "unpkg": "dist/CountryFlag.min.js",
   "files": [
     "dist/*"
   ],

@@ -5,7 +5,7 @@ _Country flags as a Vue 3 Component_
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.3" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.0.4" alt="Install size">
     <img src="https://img.shields.io/badge/Vue.js%203-compatible-green.svg" alt="Vue.js 3 compatible">
   <a href="https://www.npmjs.com/package/vue-country-flag-next"><img src="https://img.shields.io/badge/npm-2.0.3-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag-next"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
@@ -28,7 +28,7 @@ Import `CountryFlag` component in your app, for example:
 - in `main.js` you can mount it as a global Vue component:
 
 ```js
-import CountryFlag from 'vue-country-flag'
+import CountryFlag from 'vue-country-flag-next'
 
 new Vue({
     components: {
