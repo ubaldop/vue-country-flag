@@ -10,6 +10,7 @@ import babel from '@rollup/plugin-babel';
 import PostCSS from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
+import copy from 'rollup-plugin-copy'
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -39,6 +40,7 @@ const baseConfig = {
     ],
     replace: {
       'process.env.NODE_ENV': JSON.stringify('production'),
+      __name: 'vue-country-flag-next'
     },
     vue: {
     },
@@ -58,6 +60,9 @@ const baseConfig = {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
       babelHelpers: 'bundled',
     },
+    copyTargets: {
+      targets: [{ src: 'src/flags.png', dest: 'dist' }]
+    }
   },
 };
 
@@ -66,7 +71,7 @@ const baseConfig = {
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   // eg. 'jquery'
-  'vue',
+  'vue'
 ];
 
 // UMD/IIFE shared settings: output.globals
@@ -106,6 +111,7 @@ if (!argv.format || argv.format === 'es') {
         ],
       }),
       commonjs(),
+      copy(baseConfig.plugins.copyTargets)
     ],
   };
   buildFormats.push(esConfig);
@@ -130,6 +136,7 @@ if (!argv.format || argv.format === 'cjs') {
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
       commonjs(),
+      copy(baseConfig.plugins.copyTargets)
     ],
   };
   buildFormats.push(umdConfig);
@@ -154,6 +161,7 @@ if (!argv.format || argv.format === 'iife') {
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
       commonjs(),
+      copy(baseConfig.plugins.copyTargets),
       terser({
         output: {
           ecma: 5,
