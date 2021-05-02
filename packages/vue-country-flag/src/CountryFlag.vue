@@ -27,13 +27,17 @@ export default {
     }
   },
   computed: {
+    //__name is dynamically replaced through rollup-replace
     backgroundUrl() {
       if(this.background && this.background != '') {
         return this.background;
       } else {
-         return require(`__name/dist/flags.png`) //__name is dynamicall replaced through rollup-replace
+        if (process.env.SSR) {
+          return `__name/dist/flags.png`;
+        } else {
+         return require(`__name/dist/flags.png`)
+        }
       }
-     
     },
 
     flagIconClass () {

@@ -40,6 +40,7 @@ const baseConfig = {
     ],
     replace: {
       'process.env.NODE_ENV': JSON.stringify('production'),
+      "process.env.SSR": 'false',
       __name: 'vue-country-flag-next'
     },
     vue: {
@@ -130,7 +131,11 @@ if (!argv.format || argv.format === 'cjs') {
       globals,
     },
     plugins: [
-      replace(baseConfig.plugins.replace),
+      replace(
+        {
+          ...baseConfig.plugins.replace,
+          'process.env.SSR': 'true'
+      }),
       ...baseConfig.plugins.preVue,
       vue(baseConfig.plugins.vue),
       ...baseConfig.plugins.postVue,

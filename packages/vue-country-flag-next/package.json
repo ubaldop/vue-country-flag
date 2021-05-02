@@ -1,6 +1,6 @@
 {
   "name": "vue-country-flag-next",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Simple Vue component for displaying of country flags",
   "main": "dist/country-flag.ssr.js",
   "browser": "dist/CountryFlag.esm.js",
