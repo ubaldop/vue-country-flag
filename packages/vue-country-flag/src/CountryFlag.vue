@@ -104,7 +104,9 @@ export default {
   display: inline-block;
 }
 .f-and,
-.f-andorra {
+.f-andorra,
+.f-ad
+{
   background-position: 0 -41px;
 }
 .f-are,
