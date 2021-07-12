@@ -86,6 +86,7 @@ Then, after the proper mounting, in your template you can call it like this:
 |:--|:--|:--|:--|
 | size | Flag size | `String` | small, normal, big |
 | rounded | Flag with rounded borders | `Boolean` | `false` by default |
+| shadow | Flag with box shadow around | `Boolean` | `false` by default |
 | background | Path where you can upload possible custom flag images | `String` | by default it uses the flags bundled in the component |
 
 by default, the flag is displayed at *normal* size.
