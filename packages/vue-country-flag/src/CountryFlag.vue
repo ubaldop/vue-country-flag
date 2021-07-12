@@ -1,5 +1,8 @@
 <template>
-    <span :class="flagIconClass" v-if="country" :style="{ backgroundImage: `url('${backgroundUrl}')` }"></span>
+     <span 
+     :class="flagIconClass" 
+     v-if="country" 
+     :style="{ backgroundImage: `url('${backgroundUrl}')` }"></span>
 </template>
 
 <script>
@@ -11,6 +14,10 @@ export default {
       required: true
     },
     rounded: {
+      type: Boolean,
+      default: false
+    },
+    shadow: {
       type: Boolean,
       default: false
     },
@@ -44,6 +51,7 @@ export default {
       return {
         [`flag ${this.flagIconCountry}`]: true,
         [`rounded`]: this.rounded,
+        [`shadow`]: this.shadow,
         [this.flagMargin]: true
       }
     },
@@ -69,14 +77,13 @@ export default {
 </script>
 <style scoped>
   .small-flag {
-    margin: -15px -22.5px;
+    margin: 0px -20px;
     transform: scale(0.25);
     -ms-transform: scale(0.25); 
     -webkit-transform: scale(0.25);
     -moz-transform: scale(0.25);
   }
   .normal-flag {
-    margin: -10px -15px;
     transform: scale(0.5);
     -ms-transform: scale(0.5); 
     -webkit-transform: scale(0.5);
@@ -97,15 +104,31 @@ export default {
     -moz-border-radius: 8px;
     border-radius: 8px;
   }
+  .small-flag.shadow {
+    -webkit-box-shadow: 0 0 8px #333;
+    -moz-box-shadow: 0 0 8px #333;
+    box-shadow: 0 0 8px #333;
+  }
+  .normal-flag.shadow {
+    -webkit-box-shadow: 0 0 6px #333;
+    -moz-box-shadow: 0 0 6px #333;
+    box-shadow: 0 0 6px #333;
+  }
+  .big-flag.shadow {
+    -webkit-box-shadow: 0 0 3px #333;
+    -moz-box-shadow: 0 0 3px #333;
+    box-shadow: 0 0 3px #333;
+  }
 
-  .flag {
-  width: 60px;
-  height: 40px;
+.flag {
+  width: 52px;
+  height: 39px;
   display: inline-block;
+  background-repeat: no-repeat;
 }
 .f-and,
 .f-andorra {
-  background-position: 0 -41px;
+  background-position: 0 -42px;
 }
 .f-are,
 .f-ae {
@@ -165,11 +188,11 @@ export default {
 }
 .f-ala,
 .f-ax {
-  background-position: 0 -656px;
+  background-position: 0 -657px;
 }
 .f-aze,
 .f-az {
-  background-position: 0 -697px;
+  background-position: 0 -698px;
 }
 .f-bih,
 .f-ba {
@@ -205,7 +228,7 @@ export default {
 }
 .f-ben,
 .f-bj {
-  background-position: 0 -1066px;
+  background-position: 0 -1067px;
 }
 .f-blm,
 .f-bl {
@@ -225,7 +248,7 @@ export default {
 }
 .f-bes,
 .f-bq {
-  background-position: 0 -1271px;
+  background-position: 0 -1272px;
 }
 .f-bra,
 .f-br {
@@ -245,7 +268,7 @@ export default {
 }
 .f-bwa,
 .f-bw {
-  background-position: 0 -1476px;
+  background-position: 0 -1477px;
 }
 .f-blr,
 .f-by {
@@ -333,7 +356,7 @@ export default {
 }
 .f-deu,
 .f-de {
-  background-position: 0 -2378px;
+  background-position: 0 -2377px;
 }
 .f-dji,
 .f-dj {
@@ -373,7 +396,7 @@ export default {
 }
 .f-eri,
 .f-er {
-  background-position: 0 -2788px;
+  background-position: 0 -2787px;
 }
 .f-es-ca {
   background-position: 0 -2829px;
@@ -387,7 +410,7 @@ export default {
   background-position: 0 -2911px;
 }
 .f-eu {
-  background-position: 0 -2952px;
+  background-position: 0 -2953px;
 }
 .f-fin,
 .f-fi {
@@ -463,7 +486,7 @@ export default {
 }
 .f-gmb,
 .f-gm {
-  background-position: 0 -3772px;
+  background-position: 0 -3771px;
 }
 .f-gin,
 .f-gn {
@@ -519,7 +542,7 @@ export default {
 }
 .f-hti,
 .f-ht {
-  background-position: 0 -4346px;
+  background-position: 0 -4347px;
 }
 .f-hun,
 .f-hu {
@@ -531,7 +554,7 @@ export default {
 }
 .f-irl,
 .f-ie {
-  background-position: 0 -4469px;
+  background-position: 0 -4468px;
 }
 .f-isr,
 .f-il {
@@ -543,7 +566,7 @@ export default {
 }
 .f-ind,
 .f-in {
-  background-position: 0 -4592px;
+  background-position: 0 -4593px;
 }
 .f-iot,
 .f-io {
@@ -651,7 +674,7 @@ export default {
 }
 .f-lso,
 .f-ls {
-  background-position: 0 -5699px;
+  background-position: 0 -5698px;
 }
 .f-ltu,
 .f-lt {
@@ -667,7 +690,7 @@ export default {
 }
 .f-lby,
 .f-ly {
-  background-position: 0 -5863px;
+  background-position: 0 -5862px;
 }
 .f-mar,
 .f-ma {
@@ -683,7 +706,7 @@ export default {
 }
 .f-mne,
 .f-me {
-  background-position: 0 -6027px;
+  background-position: 0 -6028px;
 }
 .f-maf,
 .f-mf {
@@ -703,7 +726,7 @@ export default {
 }
 .f-mli,
 .f-ml {
-  background-position: 0 -6232px;
+  background-position: 0 -6233px;
 }
 .f-mmr,
 .f-mm {
@@ -719,7 +742,7 @@ export default {
 }
 .f-mnp,
 .f-mp {
-  background-position: 0 -6396px;
+  background-position: 0 -6397px;
 }
 .f-mtq,
 .f-mq {
@@ -747,7 +770,7 @@ export default {
 }
 .f-mwi,
 .f-mw {
-  background-position: 0 -6683px;
+  background-position: 0 -6682px;
 }
 .f-mex,
 .f-mx {
@@ -799,7 +822,7 @@ export default {
 }
 .f-nru,
 .f-nr {
-  background-position: 0 -7216px;
+  background-position: 0 -7217px;
 }
 .f-niu,
 .f-nu {
@@ -823,7 +846,7 @@ export default {
 }
 .f-pyf,
 .f-pf {
-  background-position: 0 -7462px;
+  background-position: 0 -7463px;
 }
 .f-png,
 .f-pg {
@@ -863,7 +886,7 @@ export default {
 }
 .f-plw,
 .f-pw {
-  background-position: 0 -7872px;
+  background-position: 0 -7873px;
 }
 .f-pry,
 .f-py {
@@ -887,7 +910,7 @@ export default {
 }
 .f-rus,
 .f-ru {
-  background-position: 0 -8118px;
+  background-position: 0 -8117px;
 }
 .f-rwa,
 .f-rw {
@@ -943,7 +966,7 @@ export default {
 }
 .f-sen,
 .f-sn {
-  background-position: 0 -8692px;
+  background-position: 0 -8693px;
 }
 .f-som,
 .f-so {
@@ -987,7 +1010,7 @@ export default {
 }
 .f-atf,
 .f-tf {
-  background-position: 0 -9143px;
+  background-position: 0 -9142px;
 }
 .f-tgo,
 .f-tg {
@@ -1019,7 +1042,7 @@ export default {
 }
 .f-ton,
 .f-to {
-  background-position: 0 -9471px;
+  background-position: 0 -9472px;
 }
 .f-tur,
 .f-tr {
@@ -1027,7 +1050,7 @@ export default {
 }
 .f-tto,
 .f-tt {
-  background-position: 0 -9553px;
+  background-position: 0 -9552px;
 }
 .f-tuv,
 .f-tv {
@@ -1047,7 +1070,7 @@ export default {
 }
 .f-uga,
 .f-ug {
-  background-position: 0 -9758px;
+  background-position: 0 -9757px;
 }
 .f-umi,
 .f-um {
@@ -1102,7 +1125,7 @@ export default {
 }
 .f-wsm,
 .f-ws {
-  background-position: 0 -10332px;
+  background-position: 0 -10331px;
 }
 .f-xk {
   background-position: 0 -10373px;
@@ -1121,7 +1144,7 @@ export default {
 }
 .f-zmb,
 .f-zm {
-  background-position: 0 -10537px;
+  background-position: 0 -10538px;
 }
 .f-zwe,
 .f-zw {
@@ -1130,6 +1153,7 @@ export default {
 .f-sun,
 .f-su {
   background-position: 0 -10619px;
+  height: 26px;
 }
 
 </style>
