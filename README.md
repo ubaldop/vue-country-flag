@@ -7,10 +7,10 @@ _Country flags as a Vue Component_
 <p align="center">
 
   <img src="https://img.shields.io/npm/dm/vue-country-flag" alt="Monthly downloads">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.1.1" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.2.0" alt="Install size">
   <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
   <img src="https://img.shields.io/badge/Vue.js%203-compatible-green.svg" alt="Vue.js 3 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.1.1-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.2.0-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Supported">
   
