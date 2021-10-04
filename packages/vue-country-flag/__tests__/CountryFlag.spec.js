@@ -257,11 +257,12 @@ const buildNormalFlag = (country) => {
     }
 }
 
-const buildFlag = (country, size, rounded) => {
+const buildFlag = (country, size, { rounded, shadow } = {} ) => {
     return {
         country: country,
         size: size,
-        rounded: rounded || false
+        rounded: rounded || false,
+        shadow: shadow || false
     }
 }
 
@@ -311,10 +312,19 @@ describe('CountryFlag', () => {
 
         test("big size of rounded country-flag should return a rounded big flag", () => {
           const flag = shallowMount(CountryFlag, {
-            propsData: buildFlag("se", "big", true)
+            propsData: buildFlag("se", "big", { rounded: true })
           });
           expect(flag.attributes("class")).toBe(
             "flag f-se rounded big-flag"
+          );
+        });
+
+        test("big size of country-flag with shadow should return a big flag with shadow", () => {
+          const flag = shallowMount(CountryFlag, {
+            propsData: buildFlag("se", "big", { shadow: true })
+          });
+          expect(flag.attributes("class")).toBe(
+            "flag f-se shadow big-flag"
           );
         });
 
