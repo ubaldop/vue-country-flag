@@ -5,9 +5,9 @@ _Country flags as a Vue Component_
   <img src="https://github.com/P3trur0/vue-country-flag/blob/master/assets/logo.png?raw=true" alt="vue-country-flag"/>
 </p>
 <p align="center">
-  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.1.1" alt="Install size">
+  <img src="https://packagephobia.now.sh/badge?p=vue-country-flag@2.3.1" alt="Install size">
   <img src="https://img.shields.io/badge/Vue.js%202-compatible-green.svg" alt="Vue.js 2 compatible">
-  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.1.1-blue.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/npm-2.3.1-blue.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-country-flag"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Supported">
   
@@ -71,8 +71,7 @@ Then, after the proper mounting, in your template you can call it like this:
 |:--|:--|:--|:--|
 | size | Flag size | `String` | small, normal, big |
 | rounded | Flag with rounded borders | `Boolean` | `false` by default |
-| shadow | Flag with box shadow around | `Boolean` | `false` by default |
-| background | Path where you can upload possible custom flag images | `String` | by default it uses the flags bundled in the component |
+| shadow | Flag with box shadow around | `Boolean` | `false` by default |ß 
 
 by default, the flag is displayed at *normal* size.
 
