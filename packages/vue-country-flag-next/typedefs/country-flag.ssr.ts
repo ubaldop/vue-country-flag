@@ -1,1 +1,1 @@
-declare module 'vue-country-flag';
+declare module 'vue-country-flag-next';
