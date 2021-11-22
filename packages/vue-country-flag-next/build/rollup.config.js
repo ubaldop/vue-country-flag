@@ -124,7 +124,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/CountryFlag.ssr.js',
+      file: 'dist/country-flag.ssr.js',
       format: 'cjs',
       name: 'CountryFlag',
       exports: 'auto',

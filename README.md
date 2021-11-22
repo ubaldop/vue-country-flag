@@ -369,3 +369,23 @@ The flags used for this Vue components are provided by [Flag Icons CSS](https://
 ## Contributing
 
 Please follow the guidelines [here](https://github.com/P3trur0/vue-country-flag/blob/master/CONTRIBUTING.md).
+
+## Building the packages
+
+During development of the project, you might want to build the packages. This project uses [Lerna](https://lerna.js.org/) to manage the two packages.
+
+To build either or both packages, you first need to bootstrap Lerna. From the project root, run:
+
+```
+$ npm run bootstrap
+```
+
+After Lerna has been bootstrapped, you can use the `build` and `build:next` scripts defined in `package.json`:
+
+```
+$ npm run build
+
+$ npm run build:next
+```
+
+See `package.json` for a full overview of the different build targets.
