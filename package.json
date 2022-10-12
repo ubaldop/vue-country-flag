@@ -1,6 +1,6 @@
 {
     "name": "gfr-vue-country-flag",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "scripts": {
         "serve": "lerna run serve --scope vue-country-flag",
         "build": "lerna run build --parallel --scope vue-country-flag",
