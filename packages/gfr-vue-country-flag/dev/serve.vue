@@ -17,8 +17,11 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <CountryFlag :country='items.value'/>
-    <CountryFlag country='sun' size='big'/>
-    <CountryFlag country='se' size='small'/>
+    <CountryFlag country='dk' size='big'/>
+    <CountryFlag country='no' size='big'/>
+    <CountryFlag country='se' size='big'/>
+    <CountryFlag country='gb' size='big'/>
+    <CountryFlag country='fr' size='big'/>
+    <CountryFlag country='it' size='big'/>
   </div>
 </template>

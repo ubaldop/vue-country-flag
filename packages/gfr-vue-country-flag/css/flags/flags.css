@@ -1,0 +1,36 @@
+.flag {
+  width: 52px;
+  height: 39px;
+  display: inline-block;
+  background: url('../../../gfr-sprites.png') no-repeat;
+}
+/* Danish Flag */
+.f-dnk,
+.f-dk {
+  background-position: 0 0;
+}
+/* France Flag */
+.f-fra,
+.f-fr {
+  background-position: 0 -39px;
+}
+/* United Kingdom Flag */
+.f-gbr,
+.f-gb {
+  background-position: 0 -78px;
+}
+/* Italy Flag */
+.f-ita,
+.f-it {
+  background-position: 0 -117px;
+}
+/* Norwegian Flag */
+.f-nor,
+.f-no {
+  background-position: 0 -156px;
+}
+/* Swedish Flag */
+.f-swe,
+.f-se {
+  background-position: 0 -195px;
+}
