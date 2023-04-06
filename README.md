@@ -317,7 +317,7 @@ This component currently supports both **alpha-2** and **alpha-3** alternatives.
 | Sweden | se | swe |
 | Switzerland | ch | che |
 | Syrian Arab Republic | sy | syr |
-| Taiwan, Province of China | tw | twn |
+| Taiwan (Republic of China) | tw | twn |
 | Tajikistan | tj | tjk |
 | Tanzania, United Republic of | tz | tza |
 | Thailand | th | tha |
